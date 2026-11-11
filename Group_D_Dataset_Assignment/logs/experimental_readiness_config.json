@@ -1,0 +1,77 @@
+{
+  "random_seed": 42,
+  "split_ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "split_counts": {
+    "total": 1712,
+    "train": 1198,
+    "validation": 257,
+    "test": 257
+  },
+  "split_sentiment_distribution": {
+    "train": {
+      "Neutral": 616,
+      "Positive": 353,
+      "Negative": 229
+    },
+    "validation": {
+      "Neutral": 132,
+      "Positive": 76,
+      "Negative": 49
+    },
+    "test": {
+      "Neutral": 132,
+      "Positive": 75,
+      "Negative": 50
+    }
+  },
+  "split_emoji_counts": {
+    "train": 390,
+    "validation": 83,
+    "test": 84
+  },
+  "train_only_balanced_class_weights": {
+    "Positive": 1.1313,
+    "Neutral": 0.6483,
+    "Negative": 1.7438
+  },
+  "experimental_matrix": {
+    "E1": {
+      "text_column": "cleaned_text_with_emojis",
+      "emoji_handling": "Retained",
+      "imbalance_handling": "No class weighting (Standard Cross-Entropy)",
+      "research_objective": "RO1 baseline / RO3 control"
+    },
+    "E2": {
+      "text_column": "cleaned_text_with_emojis",
+      "emoji_handling": "Retained",
+      "imbalance_handling": "Balanced Class Weighting / Focal Loss",
+      "class_weights": {
+        "Positive": 1.1313,
+        "Neutral": 0.6483,
+        "Negative": 1.7438
+      },
+      "research_objective": "RO2 & RO3 combined interaction"
+    },
+    "E3": {
+      "text_column": "cleaned_text_no_emojis",
+      "emoji_handling": "Stripped",
+      "imbalance_handling": "No class weighting (Standard Cross-Entropy)",
+      "research_objective": "RO1 comparison baseline"
+    },
+    "E4": {
+      "text_column": "cleaned_text_no_emojis",
+      "emoji_handling": "Stripped",
+      "imbalance_handling": "Balanced Class Weighting / Focal Loss",
+      "class_weights": {
+        "Positive": 1.1313,
+        "Neutral": 0.6483,
+        "Negative": 1.7438
+      },
+      "research_objective": "RO2 text-only & RO3 ablation"
+    }
+  }
+}

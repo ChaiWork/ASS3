@@ -1,0 +1,279 @@
+{
+  "dataset_overview": {
+    "total_retrieved_samples": 1821,
+    "total_rejected_samples": 109,
+    "rejected_breakdown": {
+      "empty_or_too_short": 62,
+      "duplicate": 5,
+      "unusable_url_or_non_latin_script": 42
+    },
+    "total_valid_samples": 1712,
+    "unique_comments": 1712,
+    "candidate_video_sources": 73,
+    "active_video_sources": 52,
+    "collection_timestamp_range": {
+      "start": "2026-11-11T13:23:48Z",
+      "end": "2026-11-11T13:25:27Z"
+    },
+    "domain_distribution": {
+      "news_policy": 491,
+      "food_dining": 415,
+      "sports_entertainment": 390,
+      "consumer_service": 219,
+      "tech_review": 99,
+      "transport_infra": 98
+    }
+  },
+  "sentiment_distribution": {
+    "counts": {
+      "Neutral": 880,
+      "Positive": 504,
+      "Negative": 328
+    },
+    "percentages": {
+      "Neutral": 51.4,
+      "Positive": 29.44,
+      "Negative": 19.16
+    },
+    "imbalance_ratio_majority_to_minority": 2.68
+  },
+  "emoji_analysis": {
+    "comments_with_emoji_count": 557,
+    "comments_with_emoji_pct": 32.54,
+    "comments_without_emoji_count": 1155,
+    "comments_without_emoji_pct": 67.46,
+    "total_emoji_occurrences": 1326,
+    "mean_emojis_per_comment_overall": 0.775,
+    "mean_emojis_per_emoji_bearing_comment": 2.381,
+    "max_emojis_in_single_comment": 26,
+    "top_15_emojis": [
+      {
+        "emoji": "😂",
+        "codepoint": "U+1F602",
+        "description": "U+1F602 Face w/ Tears of Joy",
+        "count": 319
+      },
+      {
+        "emoji": "❤",
+        "codepoint": "U+2764",
+        "description": "U+2764 Red Heart",
+        "count": 126
+      },
+      {
+        "emoji": "😅",
+        "codepoint": "U+1F605",
+        "description": "U+1F605 Grinning Face w/ Sweat",
+        "count": 118
+      },
+      {
+        "emoji": "🎉",
+        "codepoint": "U+1F389",
+        "description": "U+1F389 Party Popper",
+        "count": 60
+      },
+      {
+        "emoji": "😊",
+        "codepoint": "U+1F60A",
+        "description": "U+1F60A Smiling Face",
+        "count": 58
+      },
+      {
+        "emoji": "🤣",
+        "codepoint": "U+1F923",
+        "description": "U+1F923 Rolling on Floor Laughing",
+        "count": 56
+      },
+      {
+        "emoji": "👍",
+        "codepoint": "U+1F44D",
+        "description": "U+1F44D Thumbs Up",
+        "count": 40
+      },
+      {
+        "emoji": "😮",
+        "codepoint": "U+1F62E",
+        "description": "U+1F62E Face w/ Open Mouth",
+        "count": 34
+      },
+      {
+        "emoji": "😢",
+        "codepoint": "U+1F622",
+        "description": "U+1F622 Crying Face",
+        "count": 33
+      },
+      {
+        "emoji": "😭",
+        "codepoint": "U+1F62D",
+        "description": "U+1F62D Loudly Crying Face",
+        "count": 25
+      },
+      {
+        "emoji": "✅",
+        "codepoint": "U+2705",
+        "description": "U+2705 Check Mark Button",
+        "count": 25
+      },
+      {
+        "emoji": "🤲",
+        "codepoint": "U+1F932",
+        "description": "U+1F932 Palms Up Together",
+        "count": 23
+      },
+      {
+        "emoji": "🇲🇾",
+        "codepoint": "U+1F1F2 U+1F1FE",
+        "description": "U+1F1F2-1F1FE Flag: Malaysia",
+        "count": 18
+      },
+      {
+        "emoji": "🥰",
+        "codepoint": "U+1F970",
+        "description": "U+1F970 Smiling Face w/ Hearts",
+        "count": 18
+      },
+      {
+        "emoji": "😍",
+        "codepoint": "U+1F60D",
+        "description": "U+1F60D Heart Eyes",
+        "count": 15
+      }
+    ],
+    "by_sentiment_class": {
+      "Neutral": {
+        "total_class_samples": 880,
+        "with_emoji_count": 258,
+        "with_emoji_pct": 29.32,
+        "without_emoji_count": 622,
+        "without_emoji_pct": 70.68,
+        "total_emoji_occurrences": 535,
+        "mean_emojis_per_comment": 0.608,
+        "top_5_emojis": [
+          {
+            "emoji": "😂",
+            "count": 169
+          },
+          {
+            "emoji": "😅",
+            "count": 72
+          },
+          {
+            "emoji": "❤",
+            "count": 39
+          },
+          {
+            "emoji": "😊",
+            "count": 21
+          },
+          {
+            "emoji": "🤣",
+            "count": 16
+          }
+        ]
+      },
+      "Positive": {
+        "total_class_samples": 504,
+        "with_emoji_count": 197,
+        "with_emoji_pct": 39.09,
+        "without_emoji_count": 307,
+        "without_emoji_pct": 60.91,
+        "total_emoji_occurrences": 553,
+        "mean_emojis_per_comment": 1.097,
+        "top_5_emojis": [
+          {
+            "emoji": "❤",
+            "count": 85
+          },
+          {
+            "emoji": "😂",
+            "count": 51
+          },
+          {
+            "emoji": "🎉",
+            "count": 38
+          },
+          {
+            "emoji": "👍",
+            "count": 33
+          },
+          {
+            "emoji": "😊",
+            "count": 28
+          }
+        ]
+      },
+      "Negative": {
+        "total_class_samples": 328,
+        "with_emoji_count": 102,
+        "with_emoji_pct": 31.1,
+        "without_emoji_count": 226,
+        "without_emoji_pct": 68.9,
+        "total_emoji_occurrences": 238,
+        "mean_emojis_per_comment": 0.726,
+        "top_5_emojis": [
+          {
+            "emoji": "😂",
+            "count": 99
+          },
+          {
+            "emoji": "😅",
+            "count": 27
+          },
+          {
+            "emoji": "🤣",
+            "count": 19
+          },
+          {
+            "emoji": "😢",
+            "count": 16
+          },
+          {
+            "emoji": "😮",
+            "count": 10
+          }
+        ]
+      }
+    }
+  },
+  "language_analysis": {
+    "counts": {
+      "Malay": 1137,
+      "Manglish": 281,
+      "English": 84,
+      "Other/Uncertain": 210
+    },
+    "percentages": {
+      "Malay": 66.41,
+      "Manglish": 16.41,
+      "English": 4.91,
+      "Other/Uncertain": 12.27
+    },
+    "methodology_note": "Automated lexical-marker language identification is an approximation; code-switched Malaysian Manglish/Bahasa Rojak shares cognate loanwords and shortforms with both standard Bahasa Melayu and informal English."
+  },
+  "text_statistics": {
+    "word_count": {
+      "mean": 15.42,
+      "std": 23.96,
+      "median": 10.0,
+      "q25": 5.0,
+      "q75": 18.0,
+      "min": 1,
+      "max": 631
+    },
+    "char_count_track_a_with_emojis": {
+      "mean": 93.34,
+      "std": 142.48,
+      "median": 58.0,
+      "q25": 31.0,
+      "q75": 108.0,
+      "min": 6,
+      "max": 3396
+    },
+    "char_count_track_b_no_emojis": {
+      "mean": 92.33,
+      "std": 142.11,
+      "median": 58.0,
+      "min": 3,
+      "max": 3396
+    }
+  }
+}

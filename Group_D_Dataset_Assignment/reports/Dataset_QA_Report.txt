@@ -1,0 +1,55 @@
+==================================================================================
+GROUP D — AUTOMATED DATASET QUALITY ASSURANCE (QA) REPORT
+Course  : STINK3114 Natural Language Processing (Session I 2026/2027 - A261)
+Date    : 2026-11-11 13:35:38 UTC
+Dataset : group_d_sentiment_dataset.csv (N = 1712)
+Status  : ALL 12 QUALITY ASSURANCE CHECKS PASSED (12/12)
+==================================================================================
+
+SUMMARY OF AUTOMATED VALIDATION TESTS:
+----------------------------------------------------------------------------------
+[PASS] Check 01: Minimum 1,000 final valid samples
+       Evidence: Final valid samples = 1712 (Target: 1,500–2,000; Min: 1,000)
+
+[PASS] Check 02: Unique IDs across all records
+       Evidence: Unique IDs = 1712 / 1712
+
+[PASS] Check 03: No duplicate raw comments
+       Evidence: Duplicate normalized raw_text count = 0
+
+[PASS] Check 04: No empty cleaned comments in Track A or Track B
+       Evidence: Empty Track A = 0, Empty Track B = 0
+
+[PASS] Check 05: No missing sentiment labels
+       Evidence: Missing sentiment labels = 0
+
+[PASS] Check 06: Valid sentiment classes only (Positive, Negative, Neutral)
+       Evidence: Observed classes = ['Negative', 'Neutral', 'Positive'], Invalid = []
+
+[PASS] Check 07: Both experimental text columns exist (Track A & Track B)
+       Evidence: Columns ['cleaned_text_with_emojis', 'cleaned_text_no_emojis'] verified
+
+[PASS] Check 08: Original emojis preserved in Track A (cleaned_text_with_emojis)
+       Evidence: Emoji-bearing rows = 557, Mismatches vs raw_text = 0
+
+[PASS] Check 09: Emoji removal strictly verified in Track B (cleaned_text_no_emojis)
+       Evidence: Residual emojis/emoticons in Track B = 0
+
+[PASS] Check 10: Track A & Track B alignment and raw_dataset.csv synchronization
+       Evidence: IDs aligned=True, Labels aligned=True, Non-emoji text diffs=0
+
+[PASS] Check 11: No accidental data leakage across Train/Validation/Test splits
+       Evidence: ID overlap=0, Text cross-split overlap=0, Total split rows=1712/1712, Manifest synced=True
+
+[PASS] Check 12: Collection and filtering counts are 100% reproducible
+       Evidence: Retrieved (1821) - Rejected (109) = Retained (1712) == Dataset Size (1712)
+
+----------------------------------------------------------------------------------
+SPLIT INTEGRITY & EXPERIMENTAL READINESS VERIFICATION:
+  - Total Valid Samples  : 1712
+  - Training Split (70%) : 1198 samples (69.98%)
+  - Validation Split(15%): 257 samples (15.01%)
+  - Testing Split (15%)  : 257 samples (15.01%)
+  - Cross-Split ID Leak  : 0 records
+  - Cross-Split Text Leak: 0 records
+==================================================================================

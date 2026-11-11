@@ -1,0 +1,34 @@
+{
+  "total_annotated": 1712,
+  "exact_agreement_count": 1620,
+  "disagreement_count": 92,
+  "raw_agreement_percentage": 94.63,
+  "cohens_kappa": 0.9131,
+  "labels_order": [
+    "Positive",
+    "Neutral",
+    "Negative"
+  ],
+  "confusion_matrix_ann1_vs_ann2": [
+    [
+      500,
+      38,
+      1
+    ],
+    [
+      10,
+      814,
+      5
+    ],
+    [
+      4,
+      34,
+      306
+    ]
+  ],
+  "final_class_distribution": {
+    "Neutral": 880,
+    "Positive": 504,
+    "Negative": 328
+  }
+}
