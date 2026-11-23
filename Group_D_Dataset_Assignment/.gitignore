@@ -1,0 +1,16 @@
+# Python caches & environments
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Environment secrets (NEVER commit .env)
+.env
+
+# OS & temporary archives
+.DS_Store
+Thumbs.db
+dataset.zip
+*.tmp

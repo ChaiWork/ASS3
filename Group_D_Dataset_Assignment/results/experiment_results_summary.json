@@ -1,0 +1,1469 @@
+{
+  "metadata": {
+    "generated_utc": "2026-11-21T11:27:39Z",
+    "random_state": 42,
+    "splits": {
+      "train": 1198,
+      "validation": 257,
+      "test": 257
+    },
+    "selected_shared_hyperparameters": {
+      "ngram_range": [
+        1,
+        2
+      ],
+      "C": 5.0
+    },
+    "sklearn_version": "1.9.0",
+    "python_version": "3.12.3"
+  },
+  "majority_class_sanity_baseline": {
+    "macro_f1": 0.2262,
+    "weighted_f1": 0.3486,
+    "accuracy": 0.5136,
+    "macro_precision": 0.1712,
+    "macro_recall": 0.3333,
+    "per_class": {
+      "Positive": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 75
+      },
+      "Neutral": {
+        "precision": 0.5136,
+        "recall": 1.0,
+        "f1_score": 0.6787,
+        "support": 132
+      },
+      "Negative": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 50
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        75,
+        0
+      ],
+      [
+        0,
+        132,
+        0
+      ],
+      [
+        0,
+        50,
+        0
+      ]
+    ]
+  },
+  "experiments": {
+    "E1": {
+      "experiment": {
+        "exp_id": "E1",
+        "name": "E1_EmojiRemoved_NoWeight",
+        "short_label": "E1: Removed + None\n(Baseline)",
+        "emoji_handling": "Removed",
+        "class_weight_label": "None",
+        "class_weight": null,
+        "text_column": "cleaned_text_no_emojis",
+        "convert_emojis": false,
+        "model_filename": "E1_emoji_removed_none.joblib",
+        "ro_alignment": "Baseline (RO1/RO2/RO3 reference)"
+      },
+      "hyperparameters": {
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 2,
+        "max_features": 5000,
+        "sublinear_tf": true,
+        "C": 5.0,
+        "solver": "lbfgs",
+        "max_iter": 1000,
+        "random_state": 42,
+        "class_weight": null
+      },
+      "vocabulary_size": 2652,
+      "emoji_token_features_in_vocab": 0,
+      "validation_metrics": {
+        "macro_f1": 0.5898,
+        "weighted_f1": 0.6508,
+        "accuracy": 0.6693,
+        "macro_precision": 0.6298,
+        "macro_recall": 0.578,
+        "per_class": {
+          "Positive": {
+            "precision": 0.7258,
+            "recall": 0.5921,
+            "f1_score": 0.6522,
+            "support": 76
+          },
+          "Neutral": {
+            "precision": 0.6807,
+            "recall": 0.8561,
+            "f1_score": 0.7584,
+            "support": 132
+          },
+          "Negative": {
+            "precision": 0.4828,
+            "recall": 0.2857,
+            "f1_score": 0.359,
+            "support": 49
+          }
+        },
+        "confusion_matrix": [
+          [
+            45,
+            24,
+            7
+          ],
+          [
+            11,
+            113,
+            8
+          ],
+          [
+            6,
+            29,
+            14
+          ]
+        ]
+      },
+      "test_metrics": {
+        "macro_f1": 0.6092,
+        "weighted_f1": 0.6567,
+        "accuracy": 0.6615,
+        "macro_precision": 0.6167,
+        "macro_recall": 0.6042,
+        "per_class": {
+          "Positive": {
+            "precision": 0.6667,
+            "recall": 0.64,
+            "f1_score": 0.6531,
+            "support": 75
+          },
+          "Neutral": {
+            "precision": 0.7183,
+            "recall": 0.7727,
+            "f1_score": 0.7445,
+            "support": 132
+          },
+          "Negative": {
+            "precision": 0.4651,
+            "recall": 0.4,
+            "f1_score": 0.4301,
+            "support": 50
+          }
+        },
+        "confusion_matrix": [
+          [
+            48,
+            21,
+            6
+          ],
+          [
+            13,
+            102,
+            17
+          ],
+          [
+            11,
+            19,
+            20
+          ]
+        ]
+      },
+      "top_features": {
+        "top_overall_features": {
+          "Negative": [
+            {
+              "feature": "tak",
+              "weight": 2.7557
+            },
+            {
+              "feature": "main belakang",
+              "weight": 2.5894
+            },
+            {
+              "feature": "tk",
+              "weight": 2.528
+            },
+            {
+              "feature": "berlubang",
+              "weight": 2.4928
+            },
+            {
+              "feature": "tak boleh",
+              "weight": 2.4554
+            },
+            {
+              "feature": "ulat",
+              "weight": 2.4331
+            },
+            {
+              "feature": "banjir",
+              "weight": 2.4269
+            },
+            {
+              "feature": "takut",
+              "weight": 2.4038
+            },
+            {
+              "feature": "belakang",
+              "weight": 2.3254
+            },
+            {
+              "feature": "fitnah",
+              "weight": 2.2057
+            },
+            {
+              "feature": "rasuah",
+              "weight": 2.1537
+            },
+            {
+              "feature": "rosak",
+              "weight": 2.0649
+            }
+          ],
+          "Neutral": [
+            {
+              "feature": "ada",
+              "weight": 1.79
+            },
+            {
+              "feature": "harga",
+              "weight": 1.62
+            },
+            {
+              "feature": "ka",
+              "weight": 1.5134
+            },
+            {
+              "feature": "terasa",
+              "weight": 1.494
+            },
+            {
+              "feature": "tak pernah",
+              "weight": 1.4083
+            },
+            {
+              "feature": "is",
+              "weight": 1.3852
+            },
+            {
+              "feature": "bunohan",
+              "weight": 1.3072
+            },
+            {
+              "feature": "geng",
+              "weight": 1.2516
+            },
+            {
+              "feature": "terlalu",
+              "weight": 1.2117
+            },
+            {
+              "feature": "tunggu",
+              "weight": 1.1943
+            },
+            {
+              "feature": "tempat",
+              "weight": 1.1685
+            },
+            {
+              "feature": "lelaki",
+              "weight": 1.1617
+            }
+          ],
+          "Positive": [
+            {
+              "feature": "sedap",
+              "weight": 4.1314
+            },
+            {
+              "feature": "terbaik",
+              "weight": 4.0228
+            },
+            {
+              "feature": "semoga",
+              "weight": 3.8286
+            },
+            {
+              "feature": "betul",
+              "weight": 3.7173
+            },
+            {
+              "feature": "best",
+              "weight": 3.3848
+            },
+            {
+              "feature": "tahniah",
+              "weight": 3.0621
+            },
+            {
+              "feature": "guna",
+              "weight": 2.9422
+            },
+            {
+              "feature": "setuju",
+              "weight": 2.8406
+            },
+            {
+              "feature": "bagus",
+              "weight": 2.8293
+            },
+            {
+              "feature": "mantap",
+              "weight": 2.785
+            },
+            {
+              "feature": "menang",
+              "weight": 2.6318
+            },
+            {
+              "feature": "suka",
+              "weight": 2.4673
+            }
+          ]
+        },
+        "top_emoji_features": {}
+      }
+    },
+    "E2": {
+      "experiment": {
+        "exp_id": "E2",
+        "name": "E2_EmojiRetained_NoWeight",
+        "short_label": "E2: Retained + None\n(RO1)",
+        "emoji_handling": "Retained (Text Tokens)",
+        "class_weight_label": "None",
+        "class_weight": null,
+        "text_column": "cleaned_text_with_emojis",
+        "convert_emojis": true,
+        "model_filename": "E2_emoji_retained_none.joblib",
+        "ro_alignment": "RO1 (Emoji Retention Effect)"
+      },
+      "hyperparameters": {
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 2,
+        "max_features": 5000,
+        "sublinear_tf": true,
+        "C": 5.0,
+        "solver": "lbfgs",
+        "max_iter": 1000,
+        "random_state": 42,
+        "class_weight": null
+      },
+      "vocabulary_size": 2738,
+      "emoji_token_features_in_vocab": 87,
+      "validation_metrics": {
+        "macro_f1": 0.5602,
+        "weighted_f1": 0.6285,
+        "accuracy": 0.6498,
+        "macro_precision": 0.5917,
+        "macro_recall": 0.5544,
+        "per_class": {
+          "Positive": {
+            "precision": 0.697,
+            "recall": 0.6053,
+            "f1_score": 0.6479,
+            "support": 76
+          },
+          "Neutral": {
+            "precision": 0.6707,
+            "recall": 0.8333,
+            "f1_score": 0.7432,
+            "support": 132
+          },
+          "Negative": {
+            "precision": 0.4074,
+            "recall": 0.2245,
+            "f1_score": 0.2895,
+            "support": 49
+          }
+        },
+        "confusion_matrix": [
+          [
+            46,
+            23,
+            7
+          ],
+          [
+            13,
+            110,
+            9
+          ],
+          [
+            7,
+            31,
+            11
+          ]
+        ]
+      },
+      "test_metrics": {
+        "macro_f1": 0.5873,
+        "weighted_f1": 0.6304,
+        "accuracy": 0.6342,
+        "macro_precision": 0.5938,
+        "macro_recall": 0.5827,
+        "per_class": {
+          "Positive": {
+            "precision": 0.6389,
+            "recall": 0.6133,
+            "f1_score": 0.6259,
+            "support": 75
+          },
+          "Neutral": {
+            "precision": 0.6879,
+            "recall": 0.7348,
+            "f1_score": 0.7106,
+            "support": 132
+          },
+          "Negative": {
+            "precision": 0.4545,
+            "recall": 0.4,
+            "f1_score": 0.4255,
+            "support": 50
+          }
+        },
+        "confusion_matrix": [
+          [
+            46,
+            23,
+            6
+          ],
+          [
+            17,
+            97,
+            18
+          ],
+          [
+            9,
+            21,
+            20
+          ]
+        ]
+      },
+      "top_features": {
+        "top_overall_features": {
+          "Negative": [
+            {
+              "feature": "tak",
+              "weight": 2.8885
+            },
+            {
+              "feature": "main belakang",
+              "weight": 2.7258
+            },
+            {
+              "feature": "berlubang",
+              "weight": 2.4573
+            },
+            {
+              "feature": "tak boleh",
+              "weight": 2.4427
+            },
+            {
+              "feature": "belakang",
+              "weight": 2.4233
+            },
+            {
+              "feature": "ulat",
+              "weight": 2.3794
+            },
+            {
+              "feature": "banjir",
+              "weight": 2.3764
+            },
+            {
+              "feature": "tk",
+              "weight": 2.3387
+            },
+            {
+              "feature": "fitnah",
+              "weight": 2.2323
+            },
+            {
+              "feature": "takut",
+              "weight": 2.1418
+            },
+            {
+              "feature": "lubang",
+              "weight": 2.1368
+            },
+            {
+              "feature": "rasuah",
+              "weight": 2.1231
+            }
+          ],
+          "Neutral": [
+            {
+              "feature": "harga",
+              "weight": 1.6636
+            },
+            {
+              "feature": "ada",
+              "weight": 1.6449
+            },
+            {
+              "feature": "ka",
+              "weight": 1.5263
+            },
+            {
+              "feature": "is",
+              "weight": 1.4665
+            },
+            {
+              "feature": "terasa",
+              "weight": 1.4519
+            },
+            {
+              "feature": "emoji_moyai",
+              "weight": 1.3462
+            },
+            {
+              "feature": "bunohan",
+              "weight": 1.3421
+            },
+            {
+              "feature": "geng",
+              "weight": 1.2482
+            },
+            {
+              "feature": "kat",
+              "weight": 1.2319
+            },
+            {
+              "feature": "terlalu",
+              "weight": 1.2064
+            },
+            {
+              "feature": "tempat",
+              "weight": 1.1796
+            },
+            {
+              "feature": "termasuk",
+              "weight": 1.1649
+            }
+          ],
+          "Positive": [
+            {
+              "feature": "terbaik",
+              "weight": 4.0144
+            },
+            {
+              "feature": "sedap",
+              "weight": 3.8751
+            },
+            {
+              "feature": "betul",
+              "weight": 3.667
+            },
+            {
+              "feature": "semoga",
+              "weight": 3.5867
+            },
+            {
+              "feature": "best",
+              "weight": 3.3144
+            },
+            {
+              "feature": "tahniah",
+              "weight": 3.0198
+            },
+            {
+              "feature": "guna",
+              "weight": 2.9811
+            },
+            {
+              "feature": "setuju",
+              "weight": 2.9103
+            },
+            {
+              "feature": "bagus",
+              "weight": 2.7116
+            },
+            {
+              "feature": "mantap",
+              "weight": 2.639
+            },
+            {
+              "feature": "aman",
+              "weight": 2.4766
+            },
+            {
+              "feature": "menang",
+              "weight": 2.455
+            }
+          ]
+        },
+        "top_emoji_features": {
+          "Negative": [
+            {
+              "feature": "emoji_crying_face",
+              "weight": 1.5963
+            },
+            {
+              "feature": "emoji_face_with_uneven_eyes_and_wavy_mouth",
+              "weight": 1.4898
+            },
+            {
+              "feature": "menipu emoji_face_with_tears_of_joy",
+              "weight": 0.7722
+            },
+            {
+              "feature": "emoji_face_with_open_mouth",
+              "weight": 0.7719
+            },
+            {
+              "feature": "emoji_thinking_face",
+              "weight": 0.7456
+            },
+            {
+              "feature": "emoji_face_with_tears_of_joy emoji_face_with_tears_of_joy",
+              "weight": 0.7389
+            },
+            {
+              "feature": "emoji_pensive_face",
+              "weight": 0.7384
+            },
+            {
+              "feature": "emoji_face_with_tears_of_joy",
+              "weight": 0.6732
+            },
+            {
+              "feature": "emoji_rolling_on_the_floor_laughing",
+              "weight": 0.5724
+            },
+            {
+              "feature": "emoji_flag_malaysia",
+              "weight": 0.5718
+            },
+            {
+              "feature": "emoji_white_heavy_check_mark",
+              "weight": 0.5636
+            },
+            {
+              "feature": "mat emoji_face_with_tears_of_joy",
+              "weight": 0.5248
+            }
+          ],
+          "Neutral": [
+            {
+              "feature": "emoji_moyai",
+              "weight": 1.3462
+            },
+            {
+              "feature": "emoji_person_with_folded_hands",
+              "weight": 0.8779
+            },
+            {
+              "feature": "emoji_relieved_face",
+              "weight": 0.7443
+            },
+            {
+              "feature": "emoji_drooling_face",
+              "weight": 0.7005
+            },
+            {
+              "feature": "emoji_smiling_face_with_open_mouth_and_cold_sweat",
+              "weight": 0.6859
+            },
+            {
+              "feature": "emoji_flag_malaysia emoji_flag_malaysia",
+              "weight": 0.628
+            },
+            {
+              "feature": "emoji_new_moon_with_face",
+              "weight": 0.598
+            },
+            {
+              "feature": "emoji_smiling_face_with_tear",
+              "weight": 0.5336
+            },
+            {
+              "feature": "emoji_flag_indonesia",
+              "weight": 0.4935
+            },
+            {
+              "feature": "emoji_smiling_face_with_open_mouth_and_cold_sweat emoji_smiling_face_with_open_mouth_and_cold_sweat",
+              "weight": 0.4696
+            },
+            {
+              "feature": "emoji_thumbs_up_sign emoji_hundred_points_symbol",
+              "weight": 0.4474
+            },
+            {
+              "feature": "emoji_drooling_face emoji_drooling_face",
+              "weight": 0.4253
+            }
+          ],
+          "Positive": [
+            {
+              "feature": "emoji_thumbs_up_sign",
+              "weight": 1.2683
+            },
+            {
+              "feature": "emoji_heavy_black_heart",
+              "weight": 1.2605
+            },
+            {
+              "feature": "emoji_thumbs_up_sign emoji_thumbs_up_sign",
+              "weight": 1.2405
+            },
+            {
+              "feature": "malaysia emoji_flag_malaysia",
+              "weight": 1.1033
+            },
+            {
+              "feature": "emoji_smiling_face_with_smiling_eyes_and_three_hearts",
+              "weight": 1.1028
+            },
+            {
+              "feature": "emoji_flexed_biceps",
+              "weight": 1.0127
+            },
+            {
+              "feature": "emoji_clapping_hands_sign emoji_clapping_hands_sign",
+              "weight": 0.9837
+            },
+            {
+              "feature": "emoji_face_savouring_delicious_food",
+              "weight": 0.9214
+            },
+            {
+              "feature": "emoji_face_with_open_mouth emoji_face_with_open_mouth",
+              "weight": 0.916
+            },
+            {
+              "feature": "emoji_smiling_face_with_sunglasses",
+              "weight": 0.906
+            },
+            {
+              "feature": "emoji_white_heavy_check_mark",
+              "weight": 0.8474
+            },
+            {
+              "feature": "tu emoji_thumbs_up_sign",
+              "weight": 0.7865
+            }
+          ]
+        }
+      }
+    },
+    "E3": {
+      "experiment": {
+        "exp_id": "E3",
+        "name": "E3_EmojiRemoved_Balanced",
+        "short_label": "E3: Removed + Balanced\n(RO2)",
+        "emoji_handling": "Removed",
+        "class_weight_label": "Balanced",
+        "class_weight": "balanced",
+        "text_column": "cleaned_text_no_emojis",
+        "convert_emojis": false,
+        "model_filename": "E3_emoji_removed_balanced.joblib",
+        "ro_alignment": "RO2 (Class-Imbalance Mitigation)"
+      },
+      "hyperparameters": {
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 2,
+        "max_features": 5000,
+        "sublinear_tf": true,
+        "C": 5.0,
+        "solver": "lbfgs",
+        "max_iter": 1000,
+        "random_state": 42,
+        "class_weight": "balanced"
+      },
+      "vocabulary_size": 2652,
+      "emoji_token_features_in_vocab": 0,
+      "validation_metrics": {
+        "macro_f1": 0.661,
+        "weighted_f1": 0.6955,
+        "accuracy": 0.6965,
+        "macro_precision": 0.6646,
+        "macro_recall": 0.6592,
+        "per_class": {
+          "Positive": {
+            "precision": 0.6912,
+            "recall": 0.6184,
+            "f1_score": 0.6528,
+            "support": 76
+          },
+          "Neutral": {
+            "precision": 0.7536,
+            "recall": 0.7879,
+            "f1_score": 0.7704,
+            "support": 132
+          },
+          "Negative": {
+            "precision": 0.549,
+            "recall": 0.5714,
+            "f1_score": 0.56,
+            "support": 49
+          }
+        },
+        "confusion_matrix": [
+          [
+            47,
+            19,
+            10
+          ],
+          [
+            15,
+            104,
+            13
+          ],
+          [
+            6,
+            15,
+            28
+          ]
+        ]
+      },
+      "test_metrics": {
+        "macro_f1": 0.6253,
+        "weighted_f1": 0.6573,
+        "accuracy": 0.6498,
+        "macro_precision": 0.6216,
+        "macro_recall": 0.64,
+        "per_class": {
+          "Positive": {
+            "precision": 0.6447,
+            "recall": 0.6533,
+            "f1_score": 0.649,
+            "support": 75
+          },
+          "Neutral": {
+            "precision": 0.7788,
+            "recall": 0.6667,
+            "f1_score": 0.7184,
+            "support": 132
+          },
+          "Negative": {
+            "precision": 0.4412,
+            "recall": 0.6,
+            "f1_score": 0.5085,
+            "support": 50
+          }
+        },
+        "confusion_matrix": [
+          [
+            49,
+            15,
+            11
+          ],
+          [
+            17,
+            88,
+            27
+          ],
+          [
+            10,
+            10,
+            30
+          ]
+        ]
+      },
+      "top_features": {
+        "top_overall_features": {
+          "Negative": [
+            {
+              "feature": "tak",
+              "weight": 2.8763
+            },
+            {
+              "feature": "tk",
+              "weight": 2.7402
+            },
+            {
+              "feature": "main belakang",
+              "weight": 2.728
+            },
+            {
+              "feature": "berlubang",
+              "weight": 2.7236
+            },
+            {
+              "feature": "ulat",
+              "weight": 2.6667
+            },
+            {
+              "feature": "tak boleh",
+              "weight": 2.6465
+            },
+            {
+              "feature": "banjir",
+              "weight": 2.5857
+            },
+            {
+              "feature": "takut",
+              "weight": 2.526
+            },
+            {
+              "feature": "belakang",
+              "weight": 2.4213
+            },
+            {
+              "feature": "fitnah",
+              "weight": 2.2932
+            },
+            {
+              "feature": "rasuah",
+              "weight": 2.254
+            },
+            {
+              "feature": "scam",
+              "weight": 2.2099
+            }
+          ],
+          "Neutral": [
+            {
+              "feature": "ada",
+              "weight": 1.7492
+            },
+            {
+              "feature": "harga",
+              "weight": 1.5693
+            },
+            {
+              "feature": "terasa",
+              "weight": 1.4652
+            },
+            {
+              "feature": "tak pernah",
+              "weight": 1.4537
+            },
+            {
+              "feature": "ka",
+              "weight": 1.4285
+            },
+            {
+              "feature": "is",
+              "weight": 1.3543
+            },
+            {
+              "feature": "bunohan",
+              "weight": 1.2907
+            },
+            {
+              "feature": "terlalu",
+              "weight": 1.1946
+            },
+            {
+              "feature": "tunggu",
+              "weight": 1.1507
+            },
+            {
+              "feature": "tempat",
+              "weight": 1.1368
+            },
+            {
+              "feature": "geng",
+              "weight": 1.1355
+            },
+            {
+              "feature": "berapa",
+              "weight": 1.123
+            }
+          ],
+          "Positive": [
+            {
+              "feature": "sedap",
+              "weight": 4.0883
+            },
+            {
+              "feature": "terbaik",
+              "weight": 3.943
+            },
+            {
+              "feature": "semoga",
+              "weight": 3.7865
+            },
+            {
+              "feature": "betul",
+              "weight": 3.7188
+            },
+            {
+              "feature": "best",
+              "weight": 3.3636
+            },
+            {
+              "feature": "tahniah",
+              "weight": 2.9939
+            },
+            {
+              "feature": "guna",
+              "weight": 2.8857
+            },
+            {
+              "feature": "setuju",
+              "weight": 2.8396
+            },
+            {
+              "feature": "mantap",
+              "weight": 2.7447
+            },
+            {
+              "feature": "bagus",
+              "weight": 2.7076
+            },
+            {
+              "feature": "menang",
+              "weight": 2.5592
+            },
+            {
+              "feature": "suka",
+              "weight": 2.3712
+            }
+          ]
+        },
+        "top_emoji_features": {}
+      }
+    },
+    "E4": {
+      "experiment": {
+        "exp_id": "E4",
+        "name": "E4_EmojiRetained_Balanced",
+        "short_label": "E4: Retained + Balanced\n(RO3 Combined)",
+        "emoji_handling": "Retained (Text Tokens)",
+        "class_weight_label": "Balanced",
+        "class_weight": "balanced",
+        "text_column": "cleaned_text_with_emojis",
+        "convert_emojis": true,
+        "model_filename": "E4_emoji_retained_balanced.joblib",
+        "ro_alignment": "RO3 (Combined Interaction)"
+      },
+      "hyperparameters": {
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 2,
+        "max_features": 5000,
+        "sublinear_tf": true,
+        "C": 5.0,
+        "solver": "lbfgs",
+        "max_iter": 1000,
+        "random_state": 42,
+        "class_weight": "balanced"
+      },
+      "vocabulary_size": 2738,
+      "emoji_token_features_in_vocab": 87,
+      "validation_metrics": {
+        "macro_f1": 0.6354,
+        "weighted_f1": 0.6722,
+        "accuracy": 0.6732,
+        "macro_precision": 0.6381,
+        "macro_recall": 0.6337,
+        "per_class": {
+          "Positive": {
+            "precision": 0.6571,
+            "recall": 0.6053,
+            "f1_score": 0.6301,
+            "support": 76
+          },
+          "Neutral": {
+            "precision": 0.7372,
+            "recall": 0.7652,
+            "f1_score": 0.7509,
+            "support": 132
+          },
+          "Negative": {
+            "precision": 0.52,
+            "recall": 0.5306,
+            "f1_score": 0.5253,
+            "support": 49
+          }
+        },
+        "confusion_matrix": [
+          [
+            46,
+            19,
+            11
+          ],
+          [
+            18,
+            101,
+            13
+          ],
+          [
+            6,
+            17,
+            26
+          ]
+        ]
+      },
+      "test_metrics": {
+        "macro_f1": 0.6368,
+        "weighted_f1": 0.6687,
+        "accuracy": 0.6615,
+        "macro_precision": 0.6329,
+        "macro_recall": 0.6517,
+        "per_class": {
+          "Positive": {
+            "precision": 0.6533,
+            "recall": 0.6533,
+            "f1_score": 0.6533,
+            "support": 75
+          },
+          "Neutral": {
+            "precision": 0.7895,
+            "recall": 0.6818,
+            "f1_score": 0.7317,
+            "support": 132
+          },
+          "Negative": {
+            "precision": 0.4559,
+            "recall": 0.62,
+            "f1_score": 0.5254,
+            "support": 50
+          }
+        },
+        "confusion_matrix": [
+          [
+            49,
+            14,
+            12
+          ],
+          [
+            17,
+            90,
+            25
+          ],
+          [
+            9,
+            10,
+            31
+          ]
+        ]
+      },
+      "top_features": {
+        "top_overall_features": {
+          "Negative": [
+            {
+              "feature": "tak",
+              "weight": 3.1036
+            },
+            {
+              "feature": "main belakang",
+              "weight": 2.9324
+            },
+            {
+              "feature": "berlubang",
+              "weight": 2.6911
+            },
+            {
+              "feature": "tak boleh",
+              "weight": 2.6394
+            },
+            {
+              "feature": "ulat",
+              "weight": 2.5949
+            },
+            {
+              "feature": "belakang",
+              "weight": 2.5871
+            },
+            {
+              "feature": "banjir",
+              "weight": 2.5556
+            },
+            {
+              "feature": "tk",
+              "weight": 2.5429
+            },
+            {
+              "feature": "fitnah",
+              "weight": 2.3634
+            },
+            {
+              "feature": "lubang",
+              "weight": 2.3357
+            },
+            {
+              "feature": "rasuah",
+              "weight": 2.2457
+            },
+            {
+              "feature": "takut",
+              "weight": 2.2409
+            }
+          ],
+          "Neutral": [
+            {
+              "feature": "ada",
+              "weight": 1.5994
+            },
+            {
+              "feature": "harga",
+              "weight": 1.596
+            },
+            {
+              "feature": "ka",
+              "weight": 1.4412
+            },
+            {
+              "feature": "is",
+              "weight": 1.4394
+            },
+            {
+              "feature": "terasa",
+              "weight": 1.4244
+            },
+            {
+              "feature": "bunohan",
+              "weight": 1.3247
+            },
+            {
+              "feature": "emoji_moyai",
+              "weight": 1.3167
+            },
+            {
+              "feature": "terlalu",
+              "weight": 1.1818
+            },
+            {
+              "feature": "kat",
+              "weight": 1.1672
+            },
+            {
+              "feature": "tempat",
+              "weight": 1.1428
+            },
+            {
+              "feature": "termasuk",
+              "weight": 1.1395
+            },
+            {
+              "feature": "geng",
+              "weight": 1.1293
+            }
+          ],
+          "Positive": [
+            {
+              "feature": "terbaik",
+              "weight": 3.9244
+            },
+            {
+              "feature": "sedap",
+              "weight": 3.8455
+            },
+            {
+              "feature": "betul",
+              "weight": 3.6889
+            },
+            {
+              "feature": "semoga",
+              "weight": 3.6442
+            },
+            {
+              "feature": "best",
+              "weight": 3.298
+            },
+            {
+              "feature": "tahniah",
+              "weight": 2.9882
+            },
+            {
+              "feature": "guna",
+              "weight": 2.9256
+            },
+            {
+              "feature": "setuju",
+              "weight": 2.9075
+            },
+            {
+              "feature": "bagus",
+              "weight": 2.609
+            },
+            {
+              "feature": "mantap",
+              "weight": 2.579
+            },
+            {
+              "feature": "aman",
+              "weight": 2.448
+            },
+            {
+              "feature": "menang",
+              "weight": 2.391
+            }
+          ]
+        },
+        "top_emoji_features": {
+          "Negative": [
+            {
+              "feature": "emoji_crying_face",
+              "weight": 1.8312
+            },
+            {
+              "feature": "emoji_face_with_uneven_eyes_and_wavy_mouth",
+              "weight": 1.7005
+            },
+            {
+              "feature": "menipu emoji_face_with_tears_of_joy",
+              "weight": 0.8252
+            },
+            {
+              "feature": "emoji_face_with_open_mouth",
+              "weight": 0.8161
+            },
+            {
+              "feature": "emoji_face_with_tears_of_joy emoji_face_with_tears_of_joy",
+              "weight": 0.8025
+            },
+            {
+              "feature": "emoji_pensive_face",
+              "weight": 0.7838
+            },
+            {
+              "feature": "emoji_thinking_face",
+              "weight": 0.7735
+            },
+            {
+              "feature": "emoji_face_with_tears_of_joy",
+              "weight": 0.7617
+            },
+            {
+              "feature": "emoji_flag_malaysia",
+              "weight": 0.7007
+            },
+            {
+              "feature": "emoji_rolling_on_the_floor_laughing",
+              "weight": 0.6398
+            },
+            {
+              "feature": "mat emoji_face_with_tears_of_joy",
+              "weight": 0.5858
+            },
+            {
+              "feature": "emoji_white_heavy_check_mark",
+              "weight": 0.559
+            }
+          ],
+          "Neutral": [
+            {
+              "feature": "emoji_moyai",
+              "weight": 1.3167
+            },
+            {
+              "feature": "emoji_person_with_folded_hands",
+              "weight": 0.8317
+            },
+            {
+              "feature": "emoji_relieved_face",
+              "weight": 0.7325
+            },
+            {
+              "feature": "emoji_smiling_face_with_open_mouth_and_cold_sweat",
+              "weight": 0.7033
+            },
+            {
+              "feature": "emoji_drooling_face",
+              "weight": 0.6967
+            },
+            {
+              "feature": "emoji_new_moon_with_face",
+              "weight": 0.5804
+            },
+            {
+              "feature": "emoji_flag_malaysia emoji_flag_malaysia",
+              "weight": 0.5708
+            },
+            {
+              "feature": "emoji_smiling_face_with_tear",
+              "weight": 0.5337
+            },
+            {
+              "feature": "emoji_smiling_face_with_open_mouth_and_cold_sweat emoji_smiling_face_with_open_mouth_and_cold_sweat",
+              "weight": 0.5014
+            },
+            {
+              "feature": "emoji_flag_indonesia",
+              "weight": 0.4767
+            },
+            {
+              "feature": "emoji_heavy_black_heart",
+              "weight": 0.4367
+            },
+            {
+              "feature": "emoji_thumbs_up_sign emoji_hundred_points_symbol",
+              "weight": 0.4247
+            }
+          ],
+          "Positive": [
+            {
+              "feature": "emoji_thumbs_up_sign",
+              "weight": 1.4125
+            },
+            {
+              "feature": "emoji_heavy_black_heart",
+              "weight": 1.3475
+            },
+            {
+              "feature": "emoji_thumbs_up_sign emoji_thumbs_up_sign",
+              "weight": 1.1788
+            },
+            {
+              "feature": "malaysia emoji_flag_malaysia",
+              "weight": 1.1177
+            },
+            {
+              "feature": "emoji_smiling_face_with_smiling_eyes_and_three_hearts",
+              "weight": 1.0841
+            },
+            {
+              "feature": "emoji_flexed_biceps",
+              "weight": 1.0026
+            },
+            {
+              "feature": "emoji_face_with_open_mouth emoji_face_with_open_mouth",
+              "weight": 0.9847
+            },
+            {
+              "feature": "emoji_clapping_hands_sign emoji_clapping_hands_sign",
+              "weight": 0.9432
+            },
+            {
+              "feature": "emoji_smiling_face_with_sunglasses",
+              "weight": 0.8764
+            },
+            {
+              "feature": "emoji_face_savouring_delicious_food",
+              "weight": 0.8687
+            },
+            {
+              "feature": "emoji_white_heavy_check_mark",
+              "weight": 0.809
+            },
+            {
+              "feature": "emoji_fire",
+              "weight": 0.8072
+            }
+          ]
+        }
+      }
+    }
+  },
+  "factorial_deltas_test_macro_f1": {
+    "RO1_emoji_effect_unweighted_E2_minus_E1": -0.0219,
+    "RO1_emoji_effect_balanced_E4_minus_E3": 0.0115,
+    "RO2_balance_effect_no_emoji_E3_minus_E1": 0.0161,
+    "RO2_balance_effect_with_emoji_E4_minus_E2": 0.0495,
+    "RO3_combined_gain_E4_minus_E1": 0.0276,
+    "RO3_interaction_term_E4_minus_E3_minus_E2_plus_E1": 0.0334,
+    "RO3_negative_recall_gain_E4_minus_E1": 0.22
+  }
+}
