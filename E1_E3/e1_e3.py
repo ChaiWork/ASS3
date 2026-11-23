@@ -12,7 +12,6 @@ Run:     python e1_e3.py
 
 E1 = Logistic Regression without class balancing.
 E3 = Same model, with class_weight='balanced'.
-Uses your teammate's existing splits; it never creates new splits.
 """
 
 from pathlib import Path
